@@ -2,17 +2,14 @@
 
 # create zip file of source grid home
 ```
-# first node
 tar -czvf  <target-folder>/<filename>.tgz <source-folder>
-
-# second node
-tar -czvf  <target-folder>/<filename>.tgz <source-folder>
-
 ```
 # unzip
 ```
-tar -xzvf <filename.tgz>
+node1: tar -xzvf <filename.tgz>
+node2: tar -xzvf <filename.tgz>
 ```
+
 # cleanup
 ```
 # cd /<grid-home>
@@ -51,7 +48,8 @@ perl clone.pl -silent \
     INVENTORY_LOCATION=<inventory>/oraInventory \
     CRS=TRUE
 
-You will be prompted to run orainstRoot.sh and root.sh,run only orainstRoot.sh on local node, don't run root.sh
+You will be prompted to run orainstRoot.sh and root.sh,
+run only orainstRoot.sh on local node, don't run root.sh
 
 # second node
 perl clone.pl -silent \
@@ -63,7 +61,8 @@ perl clone.pl -silent \
     INVENTORY_LOCATION=<inventory>/oraInventory \
     CRS=TRUE
 
-You will be prompted to run orainstRoot.sh and root.sh,run only orainstRoot.sh on local node, don't run root.sh
+You will be prompted to run orainstRoot.sh and root.sh,
+run only orainstRoot.sh on local node, don't run root.sh
 ```
 
 # configure
