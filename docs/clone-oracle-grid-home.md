@@ -70,3 +70,7 @@ run only orainstRoot.sh on local node, don't run root.sh
 <grid-home>/crs/config/config.sh -silent -ignoreprereq -responseFile /home/grid/<response-file>.rsp
 ```
 
+# check status
+```
+<grid-home>/bin/crsctl stat res -t
+```
