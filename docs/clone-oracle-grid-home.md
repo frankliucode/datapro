@@ -1,16 +1,16 @@
 # clone oracle grid home
 
-# create zip file of source grid home
+## create zip file of source grid home
 ```
 tar -czvf  <target-folder>/<filename>.tgz <source-folder>
 ```
-# unzip
+## unzip
 ```
 node1: tar -xzvf <filename.tgz>
 node2: tar -xzvf <filename.tgz>
 ```
 
-# cleanup
+## cleanup
 ```
 # cd /<grid-home>
 # rm -rf log/<old-hostname>
@@ -30,12 +30,12 @@ node2: tar -xzvf <filename.tgz>
 # rm -rf inventory/backup/*
 ```
 
-# pre-check
+## pre-check
 ```
 ./runcluvfy.sh stage -pre crsinst -n <node1>,<node2> -fixup -verbose
 ```
 
-# clone (as grid user)
+## clone (as grid user)
 ```
 
 # first node
@@ -65,12 +65,12 @@ You will be prompted to run orainstRoot.sh and root.sh,
 run only orainstRoot.sh on local node, don't run root.sh
 ```
 
-# configure
+## configure
 ```
 <grid-home>/crs/config/config.sh -silent -ignoreprereq -responseFile /home/grid/<response-file>.rsp
 ```
 
-# check status
+## check status
 ```
 <grid-home>/bin/crsctl stat res -t
 ```
