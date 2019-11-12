@@ -1,5 +1,5 @@
 # clone oracle home
 
 ```
-clone.pl
+perl clone.pl ORACLE_HOME=$ORACLE_HOME ORACLE_BASE=$ORACLE_BASE 
 ```
